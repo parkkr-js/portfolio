@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Rss } from 'lucide-react';
+import { Mail, Github, Linkedin, StickyNote } from 'lucide-react';
 
 interface ProfileCardProps {
   name?: string;
@@ -21,10 +21,10 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   description = "사용자 경험을 중시하는 프론트엔드 개발자입니다. React와 TypeScript를 활용하여 깔끔하고 효율적인 웹 애플리케이션을 개발합니다.",
   image = "/asset/img/profile.jpeg",
   links = {
-    github: "https://github.com",
+    github: "https://github.com/parkkr-js",
     linkedin: "https://linkedin.com",
-    email: "mailto:example@email.com",
-    blog: "https://example.com"
+    email: "mailto:parkkr.js@gmail.com",
+    blog: "https://velog.io/@live_in_truth/posts"
   }
 }) => {
   return (
@@ -93,7 +93,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
               className="text-gray-400 hover:text-primary transition-colors"
               aria-label="개발 블로그"
             >
-              <Rss size={20} />
+              <StickyNote size={20} />
             </a>
           )}
         </div>

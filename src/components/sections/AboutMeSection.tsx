@@ -11,10 +11,10 @@ const AboutMeSection: React.FC = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
+      <h2 className="text-3xl font-bold text-white mb-6">방문해주셔서 감사합니다.</h2>
       <div className="space-y-4 text-gray-300 leading-relaxed">
         <p>
-          안녕하세요! 사용자 경험을 중시하는 신입 프론트엔드 개발자 OOO입니다. 
+          안녕하세요! 사용자 경험을 중시하는 프론트엔드 개발자 박지성입니다. 
           React와 TypeScript를 활용하여 인터랙티브하고 직관적인 웹 애플리케이션을 만드는 데 열정을 가지고 있습니다.
         </p>
         <p>

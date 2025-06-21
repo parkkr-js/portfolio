@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Rss } from 'lucide-react';
+import { Mail, Github, Linkedin, StickyNote } from 'lucide-react';
 
 const contactInfo = [
     { icon: Mail, text: 'hello@aabid.com', href: 'mailto:hello@aabid.com' },
     { icon: Github, text: 'github.com/aabid', href: 'https://github.com/aabid' },
     { icon: Linkedin, text: 'linkedin.com/in/aabid', href: 'https://linkedin.com/in/aabid' },
-    { icon: Rss, text: 'aabid.tech/blog', href: 'https://aabid.tech/blog' },
+    { icon: StickyNote, text: 'aabid.tech/blog', href: 'https://aabid.tech/blog' },
 ];
 
 const ContactSection: React.FC = () => {

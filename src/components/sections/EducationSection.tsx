@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 const educationData = [
   {
-    institution: '멋쟁이사자처럼 FE 스쿨',
-    period: '2023.09 - 2024.03',
-    description: 'React, Next.js, TypeScript 기반의 프론트엔드 심화 과정 수료',
+    institution: '경북 IT 협업 동아리 PARD',
+    period: '2023.03 - 2024.03',
+    description: '1기 프론트엔드, 2기 서버파트장',
   },
   {
-    institution: 'OO 대학교',
-    period: '2018.03 - 2023.08',
-    description: '컴퓨터공학과 졸업 (학점: 3.8 / 4.5)',
+    institution: '한동 대학교',
+    period: '2017.03 - 2025.02',
+    description: '전산전자공학부',
   },
 ];
 

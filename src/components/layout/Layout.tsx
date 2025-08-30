@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Sidebar, MainContent, MobileHeader, MobileFooter } from "./index";
 
 const Layout = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
 
   // 마우스 움직임 감지 (데스크톱에서만)
   useEffect(() => {
@@ -14,6 +15,17 @@ const Layout = () => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  useEffect(() => {
+    const container = mobileScrollRef.current;
+    if (!container) return;
+    try {
+      container.scrollTo({ top: 0, behavior: "auto" });
+    } catch {
+      // scrollTo 미지원 브라우저 대응
+      container.scrollTop = 0;
+    }
+  }, [activeSection]);
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
@@ -38,7 +50,7 @@ const Layout = () => {
       {/* 모바일 레이아웃 */}
       <div className="lg:hidden flex flex-col h-screen">
         <MobileHeader activeSection={activeSection} setActiveSection={setActiveSection} />
-        <div className="flex-1 overflow-y-auto">
+        <div ref={mobileScrollRef} className="flex-1 overflow-y-auto">
           <MainContent setActiveSection={setActiveSection} activeSection={activeSection} isMobile={true} />
         </div>
         <MobileFooter />

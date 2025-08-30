@@ -89,10 +89,11 @@ a {
   animation: activeSectionPulse 2s ease-in-out infinite;
 }
 
-/* 모든 인터랙티브 요소에 부드러운 트랜지션 적용 */
-button, a, div {
-  /* 모든 속성에 0.3초 부드러운 트랜지션 */
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* 인터랙티브 요소에 한정된 트랜지션 적용 (레이아웃 깜박임 방지) */
+button, a {
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 호버 시 위로 올라가는 효과 */

@@ -59,15 +59,19 @@ const MainContent = ({ setActiveSection, activeSection = "about", isMobile = fal
     return (
       <div className="w-full">
         <motion.div
-          key={activeSection}
-          initial={{ opacity: 0, x: 20 }}
+          initial={false}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
           className="w-full px-4 py-6"
         >
-          {activeSection === "about" && <About />}
-          {activeSection === "experience" && <Experience />}
-          {activeSection === "projects" && <Projects />}
+          <div className={activeSection === "about" ? "" : "hidden"} aria-hidden={activeSection !== "about"}>
+            <About />
+          </div>
+          <div className={activeSection === "experience" ? "" : "hidden"} aria-hidden={activeSection !== "experience"}>
+            <Experience />
+          </div>
+          <div className={activeSection === "projects" ? "" : "hidden"} aria-hidden={activeSection !== "projects"}>
+            <Projects />
+          </div>
         </motion.div>
       </div>
     );

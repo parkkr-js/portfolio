@@ -44,7 +44,7 @@ const MobileHeader = ({ activeSection, setActiveSection }: MobileHeaderProps) =>
 
       {/* 네비게이션 */}
       <nav className="relative">
-        <div className="absolute inset-0 bg-gray-800/50 rounded-xl backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-gray-800/50 rounded-xl supports-[backdrop-filter]:backdrop-blur-sm" />
         <div className="relative flex space-x-1 p-1">
           {navItems.map((item, index) => (
             <motion.button

@@ -1,20 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/jpeg" href="%PUBLIC_URL%/asset/img/profile.jpeg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="description" content="Park Ji Sung · Software Engineer Portfolio. IT 기술로 사람들의 문제를 해결하는 개발자가 되기 위해 성장하고 있습니다." />
+    <link rel="canonical" href="https://www.parkjs.dev/" />
+    <meta name="author" content="박지성" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+
+    <!-- Preconnects for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/asset/img/profile.jpeg" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="박지성 · Software Engineer Portfolio" />
+    <meta property="og:title" content="박지성 · Software Engineer Portfolio" />
+    <meta property="og:description" content="IT 기술로 사람들의 문제를 해결하는 개발자가 되기 위해 성장하고 있습니다." />
+    <meta property="og:url" content="https://www.parkjs.dev/" />
+    <meta property="og:image" content="%PUBLIC_URL%/asset/img/profile.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Park Ji Sung Software Engineer Portfolio" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="박지성 · Software Engineer Portfolio" />
+    <meta name="twitter:description" content="IT 기술로 사람들의 문제를 해결하는 개발자가 되기 위해 성장하고 있습니다." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/asset/img/profile.jpeg" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "박지성",
+        "jobTitle": "Software Engineer",
+        "url": "https://www.parkjs.dev/",
+        "image": "%PUBLIC_URL%/asset/img/profile.jpeg",
+        "sameAs": [
+          "https://github.com/parkkr-js",
+          "https://www.linkedin.com/in/%EC%A7%80%EC%84%B1-%EB%B0%95-414b32328/",
+          "https://velog.io/@live_in_truth/posts"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "박지성 · Portfolio",
+        "url": "https://www.parkjs.dev/",
+        "inLanguage": "ko-KR",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.google.com/search?q=site:parkjs.dev+{search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,7 +78,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Park Ji Sung · Portfolio</title>
+    <title>박지성 · Software Engineer Portfolio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -38,7 +38,7 @@ const Navigation = ({ items, activeSection, onNavClick, className = "" }: Naviga
               activeSection === item.id ? "bg-primary-500" : "bg-gray-500"
             }`}
             animate={{
-              width: activeSection === item.id ? 60 : 32,
+              width: activeSection === item.id ? 100 : 32,
             }}
             whileHover={{
               width: activeSection === item.id ? 48 : 40,

@@ -86,7 +86,7 @@ const MainContent = ({ setActiveSection, activeSection = "about", isMobile = fal
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="w-full h-full overflow-y-auto scroll-smooth"
     >
-      <div className="w-full px-8 py-12">
+      <div className="w-full pr-12 py-12">
         <About />
         <Experience />
         <Projects />

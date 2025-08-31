@@ -68,7 +68,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
         >
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-64 h-64">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-64 h-56">
               <img
                 src="/asset/img/profile.jpeg"
                 alt="Profile"
@@ -109,7 +109,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
         />
       </div>
 
-      <div className="shrink-0 mt-6">
+      <div className="shrink-0 mt-16">
         <SocialLinks links={socialLinks} />
       </div>
     </motion.div>

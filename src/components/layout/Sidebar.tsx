@@ -31,9 +31,9 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="w-full h-full bg-gray-900 flex flex-col justify-between p-12"
+      className="w-full h-full bg-gray-900 flex flex-col p-12 overflow-hidden"
     >
-      <div className="space-y-6">
+      <div className="space-y-6 shrink-0">
         <motion.h1
           className="w-72 text-3xl font-bold text-gray-100"
           initial={{ opacity: 0, y: 20 }}
@@ -101,13 +101,17 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
         </motion.div>
       </div>
 
-      <Navigation 
-        items={navItems}
-        activeSection={activeSection}
-        onNavClick={handleNavClick}
-      />
+      <div className="shrink-0 mt-8">
+        <Navigation 
+          items={navItems}
+          activeSection={activeSection}
+          onNavClick={handleNavClick}
+        />
+      </div>
 
-      <SocialLinks links={socialLinks} />
+      <div className="shrink-0 mt-6">
+        <SocialLinks links={socialLinks} />
+      </div>
     </motion.div>
   );
 };

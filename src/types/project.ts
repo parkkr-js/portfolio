@@ -1,17 +1,18 @@
 export interface ProblemSolvingAlternative {
   summary: string; // 대안 제목 (예: 대안 1: ...)
-  description?: string; // 대안설명 (요지/세부)
+  description?: string | string[]; // 대안설명 (요지/세부)
   pros?: string[]; // 장점
   cons?: string[]; // 단점
 }
 
 export interface ProblemSolvingItem {
   problem: string; // 문제
-  solution?: string; // 해결책
-  cause?: string; // 원인
-  symptom?: string; // 현상
+  solution?: string | string[]; // 해결책
+  cause?: string | string[]; // 원인
+  symptom?: string | string[]; // 현상
   alternatives?: ProblemSolvingAlternative[]; // 대안(여러 개 가능)
   adoptionReason?: string; // 대안 채택이유
+  result?: string | string[]; // 문제 해결의 결과(가독성 향상용)
 }
 
 export interface Project {
@@ -37,6 +38,12 @@ export interface Project {
     result: string[];
     stackReasons?: string[];
   };
+  // Extended narrative structure
+  background?: string[]; // Background bullets
+  keyFeatures?: string[]; // Key Feature bullets
+  architecture?: string[]; // Architecture bullets
+  stackDetail?: string[]; // Stack bullets (why/how)
+  results?: string[]; // Result bullets (duplicated from star.result allowed)
   features?: string[];
   problemSolving?: ProblemSolvingItem[];
   currentStatus?: string;

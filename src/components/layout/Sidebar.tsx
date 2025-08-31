@@ -35,7 +35,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
     >
       <div className="space-y-6">
         <motion.h1
-          className="text-3xl font-bold text-gray-100"
+          className="w-72 text-3xl font-bold text-gray-100"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
@@ -44,7 +44,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
         </motion.h1>
         
         <motion.h2
-          className="text-xl text-gray-300"
+          className="w-72 text-xl text-gray-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
@@ -53,12 +53,12 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
         </motion.h2>
         
         <motion.p
-          className="text-base text-gray-400 leading-relaxed"
+          className="w-72 text-base text-gray-400 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
         >
-          IT 기술로 사람들의 문제를 해결하는 개발자가 되기 위해 성장하고 있습니다.
+          IT 기술로 사람들의 문제를 해결하는 <br/>개발자가 되기 위해 성장하고 있습니다.
         </motion.p>
 
         <motion.div
@@ -68,7 +68,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
         >
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-48 h-48">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-64 h-64">
               <img
                 src="/asset/img/profile.jpeg"
                 alt="Profile"
@@ -79,6 +79,24 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
             
             <div className="absolute -top-2 -right-2 w-16 h-16 bg-primary-500/10 rounded-full blur-xl" />
             <div className="absolute -bottom-2 -left-2 w-20 h-20 bg-primary-500/5 rounded-full blur-2xl" />
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2 max-w-xs">
+            {[
+              "TypeScript",
+              "React",
+              "Next.js",
+              "MySQL",
+              "Spring Boot",
+              "AWS",
+              "Git"
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="px-2.5 py-1 bg-primary-500/10 text-primary-300 text-[11px] rounded-full border border-primary-500/20"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         </motion.div>
       </div>

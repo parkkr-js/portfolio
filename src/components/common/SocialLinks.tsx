@@ -45,6 +45,13 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ links, className = "flex spac
             <path d="M5 3a2 2 0 00-2 2v14l5-2.5L13 19l8-4V5a2 2 0 00-2-2H5z" />
           </svg>
         );
+      case "email":
+      case "mail":
+        return (
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.01L12 13l8-6.99V6H4zm16 12V8l-8 6-8-6v10h16z" />
+          </svg>
+        );
       default:
         return null;
     }
@@ -61,8 +68,8 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ links, className = "flex spac
         <motion.a
           key={link.name}
           href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={link.url.startsWith('mailto:') ? undefined : "_blank"}
+          rel={link.url.startsWith('mailto:') ? undefined : "noopener noreferrer"}
           className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}

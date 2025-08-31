@@ -13,7 +13,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const projects: Project[] = [sellerMapProject, pugoNargoProject, studentUnionAdminProject, npmHubProject, pardWebsiteProject, ossMovieApiProject];
+  const projects: Project[] = [sellerMapProject, pugoNargoProject, npmHubProject, ossMovieApiProject, pardWebsiteProject, studentUnionAdminProject];
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);

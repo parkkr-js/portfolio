@@ -21,7 +21,7 @@ const About = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <span className="text-primary-300">사람들의 문제를 IT 서비스로 해결</span>하는 데 가치를 두는 개발자 박지성입니다. <br/>2023년 상담심리학부에서 전산전자공학부로 전과한 뒤, 경북 IT 협업동아리 PARD 1기에서 개발파트로 <br/> 기획·디자인·개발자들과 <span className="text-primary-300">협업</span>을 처음 경험했습니다.
+          <span className="text-primary-300">사람들의 문제를 IT 서비스로 해결</span>하는 데 가치를 두는 개발자 박지성입니다. <br/>2023년 상담심리학부에서 전산전자공학부로 전과한 뒤, 경북 IT 협업동아리 PARD 1기에서 <br/> 개발파트원으로 기획·디자인·개발자들과 <span className="text-primary-300">협업</span>을 처음 경험했습니다.
         </motion.p>
 
         <motion.p

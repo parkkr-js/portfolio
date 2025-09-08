@@ -44,9 +44,7 @@ const Experience = () => {
               <ul className="space-y-2 text-white text-sm">
                 <li>• Redux와 3계층 아키텍처로 확장·유지보수 용이한 상태 관리 체계 구축</li>
                 <li>• Jest 기반 TDD·단위 테스트 체계 설계 및 구현</li>
-                <li>• Webpack Module Federation으로 MSA 기반 마이크로 프런트엔드 설계·통합</li>
                 <li>• Protocol Buffers 자동 코드 생성으로 계약 일관성 확보, Git Submodule로 API 공유</li>
-                <li>• CI/CD 파이프라인으로 개발/운영 분리 배포 및 안정적 릴리스 운영</li>
                 <li>• 활성 사용자 60명 중 3명 연간 구독(₩78,000/년) 전환으로 초기 수익화 지표 확보</li>
               </ul>
             </motion.div>

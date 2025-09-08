@@ -11,7 +11,7 @@ interface MainContentProps {
 const MainContent = ({ setActiveSection, activeSection = "about", isMobile = false }: MainContentProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // 스크롤 이벤트 핸들러 (데스크톱에서만)
+  // 스크롤 이벤트 핸들러 (모바일 제외)
   const handleScroll = useCallback(() => {
     if (!containerRef.current || isMobile) return;
 
@@ -35,7 +35,7 @@ const MainContent = ({ setActiveSection, activeSection = "about", isMobile = fal
     }
   }, [setActiveSection, isMobile]);
 
-  // 스크롤 이벤트 리스너 등록 (데스크톱에서만)
+  // 스크롤 이벤트 리스너 등록 (모바일 제외)
   useEffect(() => {
     if (isMobile) return;
 

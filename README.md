@@ -1,168 +1,76 @@
-# Aabid Ahmed - Portfolio
+# 신입 개발자 포트폴리오 (React + TypeScript)
 
-A modern, responsive portfolio website built with React, TypeScript, and Framer Motion. This project showcases professional experience, projects, and skills with beautiful animations and interactions.
+개발자 박지성의 포트폴리오 사이트 소스입니다. 실제 포트폴리오는 다음 링크에서 확인하실 수 있습니다: [parkjs.dev](https://www.parkjs.dev/).
 
-## 🚀 Features
+## 🚀 주요 특징
 
-- **Modern Design**: Clean, professional design inspired by modern portfolio websites
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Smooth Animations**: Beautiful animations powered by Framer Motion
-- **Interactive UI**: Engaging user interactions and hover effects
-- **TypeScript**: Full type safety and better development experience
-- **Tailwind CSS**: Utility-first CSS framework for rapid styling
-- **Performance Optimized**: Optimized for fast loading and smooth performance
+- **UI**: Framer Motion 기반 부드러운 트랜지션과 인터랙션
+- **다크모드 최적화**: Tailwind 커스텀 팔레트(`primary`, `dark`) 적용
+- **컴포넌트 구조화**: `layout / sections / ui / common` 모듈화
+- **타입 안정성**: `src/types/project.ts`로 프로젝트 데이터 엄격 타입 관리
+- **프로젝트 상세 모달**: STAR/문제해결 기록까지 한 번에 확인
 
-## 🛠️ Tech Stack
+## 🛠️ 기술 스택
 
-- **React 19** - Latest React with modern features
-- **TypeScript** - Type-safe development
-- **Framer Motion** - Animation library
-- **Tailwind CSS** - Utility-first CSS framework
-- **Lucide React** - Beautiful icons
-- **Vite** - Fast build tool
+- React 19, TypeScript
+- Tailwind CSS, @tailwindcss/typography
+- Framer Motion, lucide-react, react-icons
+- CRA(react-scripts)
 
-## 📁 Project Structure
+## 📁 폴더 구조 개요
 
 ```
 src/
 ├── components/
-│   ├── layout/
-│   │   ├── Header.tsx
-│   │   └── Footer.tsx
-│   ├── sections/
-│   │   ├── HeroSection.tsx
-│   │   ├── ProjectsSection.tsx
-│   │   ├── ExperienceSection.tsx
-│   │   ├── ToolsSection.tsx
-│   │   ├── BlogSection.tsx
-│   │   └── ContactSection.tsx
-│   └── ui/
-├── data/
-│   ├── projects.ts
-│   ├── experience.ts
-│   ├── tools.ts
-│   └── blog.ts
-├── hooks/
-│   └── useScrollAnimation.ts
-├── types/
-│   └── index.ts
-└── utils/
+│   ├── common/        # SectionTitle, SocialLinks 등 공용 컴포넌트
+│   ├── layout/        # Layout, Sidebar, Header, MobileHeader/Footer
+│   ├── sections/      # About, Projects, Experience 등 섹션
+│   └── ui/            # Modal, Navigation, ProjectList, ProjectDetailModal
+├── data/              # 각 프로젝트/소셜 데이터 소스 (TS)
+├── types/             # project 등 데이터 타입 정의
+└── index.tsx, App.tsx, index.css
 ```
 
-## 🎨 Sections
+실제 섹션/컴포넌트 명은 코드와 동일하게 유지됩니다. 예: `src/components/sections/Projects.tsx`, `src/components/ui/ProjectDetailModal.tsx`.
 
-1. **Hero Section** - Introduction with animated stats
-2. **Projects** - Showcase of recent work
-3. **Experience** - Professional timeline
-4. **Tools** - Technologies and tools used
-5. **Blog** - Design thoughts and articles
-6. **Contact** - Contact form and information
+## 🧩 데이터 모델
 
-## 🚀 Getting Started
+프로젝트 데이터는 `src/types/project.ts`의 `Project` 인터페이스를 따릅니다. STAR, 문제해결(문제/원인/해결/대안/결과)까지 구조화되어 있습니다.
 
-### Prerequisites
+예) `src/data/sellermap.ts`, `src/data/pugonargo.ts`, `src/data/npmhub.ts` 등에서 해당 타입으로 내역을 정의하고, `Projects.tsx`에서 배열로 렌더링합니다.
 
-- Node.js (v16 or higher)
-- npm or yarn
+## ▶️ 로컬 실행
 
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd portfolio
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm start
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### Building for Production
+사전 요구사항: Node.js 18+, pnpm
 
 ```bash
-npm run build
+pnpm install
+pnpm start
 ```
 
-## 🎯 Key Features
+빌드:
 
-### Animations
-- Scroll-triggered animations using Intersection Observer
-- Smooth page transitions
-- Hover effects and micro-interactions
-- Staggered animations for lists
-
-### Responsive Design
-- Mobile-first approach
-- Breakpoint-specific layouts
-- Touch-friendly interactions
-
-### Performance
-- Lazy loading for images
-- Optimized animations
-- Efficient re-renders with React.memo
-- Code splitting ready
-
-## 🎨 Customization
-
-### Colors
-The color scheme can be customized in `tailwind.config.js`:
-
-```javascript
-colors: {
-  primary: {
-    50: '#f0f9ff',
-    100: '#e0f2fe',
-    // ... more shades
-  }
-}
+```bash
+pnpm build
 ```
 
-### Content
-Update the data files in `src/data/` to customize:
-- Projects in `projects.ts`
-- Experience in `experience.ts`
-- Tools in `tools.ts`
-- Blog posts in `blog.ts`
+테스트:
 
-### Styling
-- Global styles in `src/index.css`
-- Component-specific styles using Tailwind classes
-- Custom CSS classes for complex animations
+```bash
+pnpm test
+```
 
-## 📱 Browser Support
+## 🎯 커스터마이징 가이드
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- **색상/테마**: `tailwind.config.js`의 `theme.extend.colors.primary`, `dark` 수정
+- **소개/경험/프로젝트 텍스트**: `src/components/sections/*.tsx` 및 `src/data/*.ts` 수정
+- **프로젝트 카드/상세**: `src/components/ui/ProjectList.tsx`, `ProjectDetailModal.tsx`
+- **문제해결 카드**: `src/components/ui/projects/ProjectDetail/*`
 
-## 🤝 Contributing
+## 🔗 링크
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+- 포트폴리오: [parkjs.dev](https://www.parkjs.dev/)
 
-## 📄 License
+## 라이선스
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Design inspiration from modern portfolio websites
-- Icons from [Lucide React](https://lucide.dev/)
-- Animation library [Framer Motion](https://www.framer.com/motion/)
-- CSS framework [Tailwind CSS](https://tailwindcss.com/)
-
----
-
-Made with ❤️ by Aabid Ahmed
+본 레포지터리의 소스는 포트폴리오 데모 용도로 공개되어 있으며, 사용에 도움이 되었다면 저장소에 Star를 눌러주시면 감사하겠습니다.

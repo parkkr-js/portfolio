@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const Section = ({ title, icon, children }: { title: string; icon?: React.ReactNode; children: React.ReactNode }) => (
   <div className="bg-gray-800/40 border border-gray-700 rounded-xl p-4 text-white">

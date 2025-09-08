@@ -8,25 +8,19 @@
 
 /* 기본 HTML 요소 스타일 */
 html {
-  /* 스크롤 동작을 부드럽게 설정 */
   scroll-behavior: smooth;
 }
 
 body {
-  /* 기본 텍스트 색상 */
   color: #f3f4f6;
-  /* 배경색 */
   background: #111827;
-  /* Inter 폰트 패밀리 설정 */
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  /* 폰트 렌더링 최적화 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 코드 폰트 설정 */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

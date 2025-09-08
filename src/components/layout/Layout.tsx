@@ -6,7 +6,7 @@ const Layout = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const mobileScrollRef = useRef<HTMLDivElement>(null);
 
-  // 마우스 움직임 감지 (데스크톱에서만)
+  // 마우스 움직임 감지 (모바일 제외)
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });

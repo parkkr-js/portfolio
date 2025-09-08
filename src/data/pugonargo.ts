@@ -13,12 +13,13 @@ export const pugoNargoProject: Project = {
   technologies: [
     "React",
     "TypeScript",
+    "GitHub Actions",
     "Firebase (Firestore, Hosting, Cloud Functions)",
     "Google APIs (OAuth2, Drive, Sheets)",
     "TanStack Query"
   ],
   github: "https://github.com/parkkr-js/pugonargo",
-  githubPrivate: true,
+  githubPrivate: false,
   external: "https://pugonargo-c652f.web.app/",
 
   // Background
@@ -45,6 +46,7 @@ export const pugoNargoProject: Project = {
   stackDetail: [
     "*React + TypeScript*: 타입 안전성과 컴포넌트 재사용으로 유지보수성 확보",
     "*TanStack Query*: 날짜 단위 서버 상태 캐시/무효화로 **동일 날짜 재조회 최소화**",
+    "*Git Action*: 브랜치 푸시 시 자동 빌드 → Firebase Hosting 배포",
     "*Google Drive/Sheets API*: 기존 스프레드시트 자산을 그대로 활용, merges/note 메타로 정확 파싱",
     "*Firebase Hosting/Functions*: 빠른 배포와 간단한 백엔드 로직 오케스트레이션"
   ],
@@ -75,7 +77,7 @@ export const pugoNargoProject: Project = {
 
   // CurrentStatus
   currentStatus:
-    "회사 요청으로 저장소는 private이며, 현재 운영 중입니다. 관리자와 약 200명의 기사님이 사용중입니다.",
+    "현재 주식회사 푸고나르고의 관리자와 약 200명의 기사님이 사용중입니다.",
 
   // Insights
   insights: [

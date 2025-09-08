@@ -24,7 +24,6 @@ export const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailMo
     setSelectedImage(null);
   };
 
-  // ESC 키로 이미지 모달 닫기
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && selectedImage) {
@@ -35,8 +34,6 @@ export const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailMo
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [selectedImage]);
-
-  // helpers/components are imported from ./projects/ProjectDetail
 
 
   return (

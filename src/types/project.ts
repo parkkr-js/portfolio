@@ -1,6 +1,6 @@
 export interface ProblemSolvingAlternative {
-  summary: string; // 대안 제목 (예: 대안 1: ...)
-  description?: string | string[]; // 대안설명 (요지/세부)
+  summary: string; // 대안 제목 
+  description?: string | string[]; // 대안설명 
   pros?: string[]; // 장점
   cons?: string[]; // 단점
 }
@@ -10,9 +10,9 @@ export interface ProblemSolvingItem {
   solution?: string | string[]; // 해결책
   cause?: string | string[]; // 원인
   symptom?: string | string[]; // 현상
-  alternatives?: ProblemSolvingAlternative[]; // 대안(여러 개 가능)
+  alternatives?: ProblemSolvingAlternative[]; // 대안
   adoptionReason?: string; // 대안 채택이유
-  result?: string | string[]; // 문제 해결의 결과(가독성 향상용)
+  result?: string | string[]; // 문제 해결의 결과
 }
 
 export interface Project {
@@ -20,8 +20,8 @@ export interface Project {
   title: string;
   subtitle?: string;
   serviceName?: string;
-  period?: string; // 예: 2024.03 ~ 2024.12
-  position?: string; // 예: Frontend Lead, Full-stack
+  period?: string; 
+  position?: string; 
   description: string;
   image: string;
   technologies: string[];
@@ -38,12 +38,11 @@ export interface Project {
     result: string[];
     stackReasons?: string[];
   };
-  // Extended narrative structure
-  background?: string[]; // Background bullets
-  keyFeatures?: string[]; // Key Feature bullets
-  architecture?: string[]; // Architecture bullets
-  stackDetail?: string[]; // Stack bullets (why/how)
-  results?: string[]; // Result bullets (duplicated from star.result allowed)
+  background?: string[];
+  keyFeatures?: string[]; 
+  architecture?: string[]; 
+  stackDetail?: string[];
+  results?: string[];
   features?: string[];
   problemSolving?: ProblemSolvingItem[];
   currentStatus?: string;

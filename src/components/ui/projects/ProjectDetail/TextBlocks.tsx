@@ -1,4 +1,3 @@
-import React from 'react';
 import { formatText } from './utils';
 
 export const BulletList = ({ items }: { items: string[] }) => (

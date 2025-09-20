@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { SectionTitle } from "../common";
-import { ProjectList, ProjectDetailModal } from "../ui";
+import { ProjectList } from "../ui";
 import { Project } from "../../types/project";
 import { pugoNargoProject } from "../../data/pugonargo";
 import { sellerMapProject } from "../../data/sellermap";
@@ -8,6 +8,8 @@ import { npmHubProject } from "../../data/npmhub";
 import { studentUnionAdminProject } from "../../data/studentUnion";
 import { pardWebsiteProject } from "../../data/pard";
 import { ossMovieApiProject } from "../../data/ossExample";
+
+const ProjectDetailModal = lazy(() => import("../ui/ProjectDetailModal").then(m => ({ default: m.ProjectDetailModal })));
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -40,13 +42,15 @@ const Projects = () => {
         ))}
       </div>
 
-      {selectedProject && (
-        <ProjectDetailModal
-          project={selectedProject}
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-        />
-      )}
+      <Suspense fallback={null}>
+        {selectedProject && (
+          <ProjectDetailModal
+            project={selectedProject}
+            isOpen={isModalOpen}
+            onClose={handleCloseModal}
+          />
+        )}
+      </Suspense>
     </section>
   );
 };

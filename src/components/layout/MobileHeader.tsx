@@ -26,6 +26,8 @@ const MobileHeader = ({ activeSection, setActiveSection }: MobileHeaderProps) =>
             <img
               src="/asset/img/profile.jpeg"
               alt="Profile"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary-500/10 via-transparent to-transparent" />

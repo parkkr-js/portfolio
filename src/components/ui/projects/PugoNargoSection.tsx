@@ -24,6 +24,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
               <img
                 src="/asset/img/project5_운행일지.png"
                 alt="운행일지 수기 작성"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 md:h-64 object-contain rounded filter blur-[0.7px] transition-transform duration-300 hover:scale-105 cursor-pointer"
                 onClick={() => onImageClick('/asset/img/project5_운행일지.png')}
               />
@@ -34,6 +36,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
               <img
                 src="/asset/img/project5_거래내역엑셀시트.png"
                 alt="거래내역 엑셀시트"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 md:h-64 object-contain rounded filter blur-[0.7px] transition-transform duration-300 hover:scale-105 cursor-pointer"
                 onClick={() => onImageClick('/asset/img/project5_거래내역엑셀시트.png')}
               />
@@ -51,6 +55,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
               <img
                 src="/asset/img/project5_배차관리엑셀시트.png"
                 alt="배차관리 엑셀시트"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 md:h-64 object-contain rounded filter blur-[0.7px] transition-transform duration-300 cursor-pointer hover:scale-105"
                 onClick={() => onImageClick('/asset/img/project5_배차관리엑셀시트.png')}
               />
@@ -78,6 +84,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
               <img
                 src="/asset/img/project5_거래내역화면.png"
                 alt="거래내역 관리"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 md:h-64 object-contain rounded transition-transform duration-300 cursor-pointer hover:scale-105"
                 onClick={() => onImageClick('/asset/img/project5_거래내역화면.png')}
               />
@@ -88,6 +96,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
               <img
                 src="/asset/img/project5_대시보드화면.png"
                 alt="관리자 대시보드"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 md:h-64 object-contain rounded transition-transform duration-300 cursor-pointer hover:scale-105"
                 onClick={() => onImageClick('/asset/img/project5_대시보드화면.png')}
               />
@@ -105,6 +115,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
               <img
                 src="/asset/img/project5_배차관리화면1.png"
                 alt="배차 관리 1"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 md:h-64 object-contain rounded transition-transform duration-300 cursor-pointer hover:scale-105"
                 onClick={() => onImageClick('/asset/img/project5_배차관리화면1.png')}
               />
@@ -115,6 +127,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
               <img
                 src="/asset/img/project5_배차관리화면2.png"
                 alt="배차 관리 2"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 md:h-64 object-contain rounded transition-transform duration-300 cursor-pointer hover:scale-105"
                 onClick={() => onImageClick('/asset/img/project5_배차관리화면2.png')}
               />
@@ -134,6 +148,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
             <img
               src="/asset/img/project5_기사님페이지기간별통계화면.png"
               alt="기간별 통계"
+              loading="lazy"
+              decoding="async"
               className="w-full h-48 md:h-64 object-contain rounded transition-transform duration-300 cursor-pointer hover:scale-105"
               onClick={() => onImageClick('/asset/img/project5_기사님페이지기간별통계화면.png')}
             />
@@ -144,6 +160,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
             <img
               src="/asset/img/project5_기사님페이지일별기록화면.png"
               alt="일별 기록"
+              loading="lazy"
+              decoding="async"
               className="w-full h-48 md:h-64 object-contain rounded transition-transform duration-300 cursor-pointer hover:scale-105"
               onClick={() => onImageClick('/asset/img/project5_기사님페이지일별기록화면.png')}
             />
@@ -154,6 +172,8 @@ export const PugoNargoSection: React.FC<PugoNargoSectionProps> = ({ onImageClick
             <img
               src="/asset/img/project5_기사님배차화면.png"
               alt="기사님 배차"
+              loading="lazy"
+              decoding="async"
               className="w-full h-48 md:h-64 object-contain rounded transition-transform duration-300 cursor-pointer hover:scale-105"
               onClick={() => onImageClick('/asset/img/project5_기사님배차화면.png')}
             />

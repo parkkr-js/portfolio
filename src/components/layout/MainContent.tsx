@@ -1,6 +1,9 @@
-import { useEffect, useCallback, useRef } from "react";
+import { useEffect, useCallback, useRef, useState, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-import { About, Experience, Projects } from "../sections";
+
+const About = lazy(() => import("../sections/About"));
+const Experience = lazy(() => import("../sections/Experience"));
+const Projects = lazy(() => import("../sections/Projects"));
 
 interface MainContentProps {
   setActiveSection: (section: string) => void;
@@ -10,6 +13,10 @@ interface MainContentProps {
 
 const MainContent = ({ setActiveSection, activeSection = "about", isMobile = false }: MainContentProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const experienceSentinelRef = useRef<HTMLDivElement>(null);
+  const projectsSentinelRef = useRef<HTMLDivElement>(null);
+  const [shouldMountExperience, setShouldMountExperience] = useState<boolean>(false);
+  const [shouldMountProjects, setShouldMountProjects] = useState<boolean>(false);
 
   // 스크롤 이벤트 핸들러 (모바일 제외)
   const handleScroll = useCallback(() => {
@@ -54,6 +61,33 @@ const MainContent = ({ setActiveSection, activeSection = "about", isMobile = fal
     };
   }, [handleScroll, isMobile]);
 
+  // 데스크톱: 섹션 근접 시점에만 마운트 (IntersectionObserver)
+  useEffect(() => {
+    if (isMobile) return;
+    const root = containerRef.current;
+    if (!root) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          if (entry.target === experienceSentinelRef.current) {
+            setShouldMountExperience(true);
+          }
+          if (entry.target === projectsSentinelRef.current) {
+            setShouldMountProjects(true);
+          }
+        }
+      },
+      { root, rootMargin: "400px 0px 400px 0px", threshold: 0 }
+    );
+
+    if (experienceSentinelRef.current) observer.observe(experienceSentinelRef.current);
+    if (projectsSentinelRef.current) observer.observe(projectsSentinelRef.current);
+
+    return () => observer.disconnect();
+  }, [isMobile]);
+
   // 모바일 레이아웃
   if (isMobile) {
     return (
@@ -63,15 +97,13 @@ const MainContent = ({ setActiveSection, activeSection = "about", isMobile = fal
           animate={{ opacity: 1, x: 0 }}
           className="w-full px-4 py-6"
         >
-          <div className={activeSection === "about" ? "" : "hidden"} aria-hidden={activeSection !== "about"}>
-            <About />
-          </div>
-          <div className={activeSection === "experience" ? "" : "hidden"} aria-hidden={activeSection !== "experience"}>
-            <Experience />
-          </div>
-          <div className={activeSection === "projects" ? "" : "hidden"} aria-hidden={activeSection !== "projects"}>
-            <Projects />
-          </div>
+          <Suspense
+            fallback={<div className="max-w-4xl mx-auto animate-pulse text-gray-500">로딩 중…</div>}
+          >
+            {activeSection === "about" && <About />}
+            {activeSection === "experience" && <Experience />}
+            {activeSection === "projects" && <Projects />}
+          </Suspense>
         </motion.div>
       </div>
     );
@@ -87,9 +119,27 @@ const MainContent = ({ setActiveSection, activeSection = "about", isMobile = fal
       className="w-full h-full overflow-y-auto scroll-smooth"
     >
       <div className="w-full pr-12 py-12">
-        <About />
-        <Experience />
-        <Projects />
+        <Suspense fallback={<div className="h-24 w-full animate-pulse bg-gray-800/40 rounded" />}> 
+          <About />
+        </Suspense>
+
+        <div ref={experienceSentinelRef} />
+        {shouldMountExperience ? (
+          <Suspense fallback={<div className="h-24 w-full mt-8 animate-pulse bg-gray-800/40 rounded" />}> 
+            <Experience />
+          </Suspense>
+        ) : (
+          <div className="h-24 w-full mt-8 animate-pulse bg-gray-800/40 rounded" aria-hidden />
+        )}
+
+        <div ref={projectsSentinelRef} />
+        {shouldMountProjects ? (
+          <Suspense fallback={<div className="h-24 w-full mt-8 animate-pulse bg-gray-800/40 rounded" />}> 
+            <Projects />
+          </Suspense>
+        ) : (
+          <div className="h-24 w-full mt-8 animate-pulse bg-gray-800/40 rounded" aria-hidden />
+        )}
         <footer className="mt-16 border-t border-gray-800 pt-6 text-xs text-gray-500">
           <p>© {new Date().getFullYear()} 박지성 Park Ji Sung. All rights reserved.</p>
         </footer>

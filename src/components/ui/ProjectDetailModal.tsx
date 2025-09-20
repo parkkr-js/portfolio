@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { Modal } from './Modal';
 import { Project } from '../../types/project';
-import { PugoNargoSection } from './projects/PugoNargoSection';
 import { Info, ListChecks, Boxes, Wrench, Trophy, Bug, Lightbulb, Activity, Github, Globe } from 'lucide-react';
 import { Section } from './projects/ProjectDetail/Section';
 import { BulletList } from './projects/ProjectDetail/TextBlocks';
 import { ProblemCard } from './projects/ProjectDetail/ProblemCard';
+
+const PugoNargoSection = lazy(() => import('./projects/PugoNargoSection').then(m => ({ default: m.PugoNargoSection })));
+ 
 
 interface ProjectDetailModalProps {
   project: Project;
@@ -59,6 +61,8 @@ export const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailMo
           <img
             src={project.image}
             alt={project.serviceName}
+            loading="lazy"
+            decoding="async"
             className="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-20"></div>
@@ -101,9 +105,11 @@ export const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailMo
         {/* 이하 섹션 후단으로 이동: Current Status, Tech Stack */}
 
         {/* 프로젝트 이미지들 */}
-        {project.slug === 'pugonargo' && (
-          <PugoNargoSection onImageClick={handleImageClick} />
-        )}
+        <Suspense fallback={null}>
+          {project.slug === 'pugonargo' && (
+            <PugoNargoSection onImageClick={handleImageClick} />
+          )}
+        </Suspense>
 
         {/* 문제 해결 과정 */}
         {project.problemSolving && project.problemSolving.length > 0 && (
@@ -218,6 +224,8 @@ export const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailMo
             <img
               src={selectedImage}
               alt="확대된 이미지"
+              loading="lazy"
+              decoding="async"
               className={`w-auto h-auto max-w-full max-h-full object-contain ${
                 selectedImage.includes('운행일지') || 
                 selectedImage.includes('거래내역엑셀시트') || 

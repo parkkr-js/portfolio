@@ -24,6 +24,8 @@ export const ProjectList: React.FC<ProjectListProps> = ({ project, onClick, inde
           <img
             src={project.image}
             alt={project.title}
+            loading="lazy"
+            decoding="async"
             className="w-full sm:w-48 h-32 sm:h-28 rounded-lg object-cover border border-gray-600 mx-auto sm:mx-0 transition-transform duration-300 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-lg z-20"></div>

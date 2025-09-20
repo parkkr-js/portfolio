@@ -9,7 +9,7 @@ export const pardWebsiteProject: Project = {
   position: "Frontend Developer",
   description:
     "동아리의 홈 · 소개 · 프로젝트 · 문의 · 리크루팅 · 뉴스 정보를 제공하는 반응형 웹 페이지",
-  image: "/asset/img/pard.png",
+  image: "/asset/img/pard.webp",
   technologies: [
     "React 18",
     "JavaScript",

@@ -9,7 +9,7 @@ export const sellerMapProject: Project = {
   position: "Frontend Developer",
   description:
     "1인 셀러 대상 통합 상품·트래픽 관리 어드민 웹앱. 분산된 구매 통계와 낮은 멀티링크 자유도로 인한 전환 분석·판매 증대 한계를 해결",
-  image: "/asset/img/project1.png",
+  image: "/asset/img/project1.webp",
   technologies: [
     "React",
     "TypeScript",

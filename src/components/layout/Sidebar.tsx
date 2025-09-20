@@ -70,7 +70,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl w-64 h-56">
               <img
-                src="/asset/img/profile.jpeg"
+                src="/asset/img/profile.webp"
                 alt="Profile"
                 fetchPriority="high"
                 decoding="async"

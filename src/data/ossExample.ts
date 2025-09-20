@@ -7,7 +7,7 @@ export const ossMovieApiProject: Project = {
   serviceName: "한동대 OpenSourceStudio(OSS) 수업 예시자료",
   period: "2024.09",
   position: "TA / Frontend Instructor",
-  image: "/asset/img/한동대학교 로고.png",
+  image: "/asset/img/한동대학교 로고.webp",
   description:
     "한동대 오픈소스스튜디오 수업 예시 프로젝트. React의 기본적인 개념과 Open API 사용법을 학생들에게 제공하기 위해 제작",
   technologies: [

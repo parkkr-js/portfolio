@@ -24,7 +24,7 @@ const MobileHeader = ({ activeSection, setActiveSection }: MobileHeaderProps) =>
         <div className="relative">
           <div className="relative rounded-xl overflow-hidden shadow-lg w-16 h-16">
             <img
-              src="/asset/img/profile.jpeg"
+              src="/asset/img/profile.webp"
               alt="Profile"
               fetchPriority="high"
               decoding="async"

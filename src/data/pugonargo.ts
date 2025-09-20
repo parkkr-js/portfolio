@@ -9,7 +9,7 @@ export const pugoNargoProject: Project = {
   position: "Frontend Developer",
   description:
     "주식회사 푸고나르고 외주 프로젝트. 기존 스프레드시트를 그대로 사용하면서 정산·배차를 자동 수집/표시하여 수작업 전달 누락·지연을 해소",
-  image: "/asset/img/푸고나르고로고.png",
+  image: "/asset/img/푸고나르고로고.webp",
   technologies: [
     "React",
     "TypeScript",

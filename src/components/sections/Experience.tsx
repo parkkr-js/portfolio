@@ -50,6 +50,35 @@ const Experience = () => {
             </motion.div>
           </div>
 
+           {/* 메를로랩 (인턴십) */}
+           <div className="border-l-2 border-gray-700 hover:border-primary-500 pl-6 transition-colors">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="mb-6"
+            >
+              <h3 className="text-xl font-semibold text-gray-100 mb-2">
+              메를로랩
+              </h3>
+              <p className="text-primary-400 mb-1">Frontend Developer (Internship)• 2024.07 - 2024.08</p>
+              <p className="text-gray-400 text-sm mb-4 font-semibold">IoT 디바이스 관리 시스템 개발   <a
+                  href="/asset/img/심사용 논문.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-primary-300 hover:text-primary-200"
+                >
+                  Article
+                </a></p>
+              <ul className="space-y-2 text-white text-sm">
+                <li>• 기존 그리드 UI에서 디바이스 위치 파악이 어려운 문제 제시, <br/>도면 기반 UI 전환으로 직관적 위치 인식이 가능하도록 해결책 제시</li>
+                <li>• React로 도면 UI를 구현해 좌표 배치 패널을 제공하고, <br/>기존 메를로랩 서버와 연동해 디바이스 상태/좌표를 저장·조회 기능 개발</li>
+              </ul>
+ 
+            </motion.div>
+          </div>
+
           {/* PARD */}
           <div className="border-l-2 border-gray-700 hover:border-primary-500 pl-6 transition-colors">
             <motion.div
@@ -82,37 +111,6 @@ const Experience = () => {
                   PARD 공식 웹사이트
                 </a></li>
               </ul>
-            </motion.div>
-          </div>
-
-         
-
-          {/* 메를로랩 (인턴십) */}
-          <div className="border-l-2 border-gray-700 hover:border-primary-500 pl-6 transition-colors">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="mb-6"
-            >
-              <h3 className="text-xl font-semibold text-gray-100 mb-2">
-              메를로랩
-              </h3>
-              <p className="text-primary-400 mb-1">Frontend Developer (Internship)• 2024.07 - 2024.08</p>
-              <p className="text-gray-400 text-sm mb-4 font-semibold">IoT 디바이스 관리 시스템 개발   <a
-                  href="/asset/img/심사용 논문.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline text-primary-300 hover:text-primary-200"
-                >
-                  Article
-                </a></p>
-              <ul className="space-y-2 text-white text-sm">
-                <li>• 기존 그리드 UI에서 디바이스 위치 파악이 어려운 문제 제시, <br/>도면 기반 UI 전환으로 직관적 위치 인식이 가능하도록 해결책 제시</li>
-                <li>• React로 도면 UI를 구현해 좌표 배치 패널을 제공하고, <br/>기존 메를로랩 서버와 연동해 디바이스 상태/좌표를 저장·조회 기능 개발</li>
-              </ul>
- 
             </motion.div>
           </div>
         </motion.div>

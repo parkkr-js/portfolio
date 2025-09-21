@@ -2,7 +2,7 @@ import { Project } from "../types/project";
 
 export const sellerMapProject: Project = {
   slug: "sellermap",
-  title: "1인 셀러들이 여러 플랫폼에서 상품을 판매할 때 겪는 문제를 해결할 수 있을까?",
+  title: "셀러맵 - 1인 셀러를 위한 서비스",
   subtitle: "1인 셀러를 위한 통합 상품·트래픽 관리 플랫폼",
   serviceName: "셀러맵 (SellerMap)",
   period: "2025.03 - ",

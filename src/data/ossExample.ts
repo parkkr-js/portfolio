@@ -2,7 +2,7 @@ import { Project } from "../types/project";
 
 export const ossMovieApiProject: Project = {
   slug: "oss-movie-api",
-  title: "한동대학교 전공수업 OpenSourceStudio(OSS) 수업 예시자료 제작",
+  title: "한동대학교 전공수업 오픈소스 스튜디오(OSS) 수업 예시자료",
   subtitle: "반응형 UI와 Open API 연동 교육용 예시자료",
   serviceName: "한동대 OpenSourceStudio(OSS) 수업 예시자료",
   period: "2024.09",

@@ -2,7 +2,7 @@ import type { Project } from "../types/project";
 
 export const pugoNargoProject: Project = {
   slug: "pugonargo",
-  title: "엑셀 내용을 카카오톡으로 일일이 주고받는 문제를 해결할 수 있을까?",
+  title: "푸고나르고 업무 자동화 시스템",
   subtitle: "스프레드시트 연동 물류 정산·배차 자동화 시스템",
   serviceName: "푸고나르고 (PugoNargo)",
   period: "2025.06 - ",
@@ -77,10 +77,10 @@ export const pugoNargoProject: Project = {
 
   // CurrentStatus
   currentStatus:
-    "현재 주식회사 푸고나르고의 관리자와 약 200명의 기사님이 사용중입니다.",
+    "현재 주식회사 푸고나르고의 관리자와 16명의 기사님이 사용중입니다.",
 
   // Insights
   insights: [
-    "*mysql 같은 관계형만 다루다 Firestore에서 시트당 2,000+행 Read 비용 이슈를 겪으며, 리소스를 줄일 수 있는 스키마 변경과 대안을 고민해 볼 수 있음*",
+    "*비관계형 테이터베이스인 Firestore에서 시트당 2,000+행 Read 비용 이슈를 겪으며, 리소스를 줄일 수 있는 스키마 변경과 대안을 고민해 볼 수 있었습니다.*",
   ]
 };

@@ -2,7 +2,7 @@ import type { Project } from "../types/project";
 
 export const npmHubProject: Project = {
   slug: "npm-hub",
-  title: "기존 npm 사이트를 개선할 수 있을까?",
+  title: "npm.hub - 초보 개발자를 위한 npm 패키지 검색 플랫폼",
   subtitle: "npm 패키지 검색·비교·평가 플랫폼",
   serviceName: "npm.hub",
   period: "2024.12 - 2025.02",

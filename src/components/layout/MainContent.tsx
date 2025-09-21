@@ -142,6 +142,14 @@ const MainContent = ({ setActiveSection, activeSection = "about", isMobile = fal
         )}
         <footer className="mt-16 border-t border-gray-800 pt-6 text-xs text-gray-500">
           <p>© {new Date().getFullYear()} 박지성 Park Ji Sung. All rights reserved.</p>
+          <a
+            href="https://github.com/parkkr-js/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 text-primary-400 hover:text-primary-300 underline"
+          >
+            GitHub Source
+          </a>
         </footer>
       </div>
     </motion.div>

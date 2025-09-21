@@ -23,7 +23,7 @@ export const npmHubProject: Project = {
   ],
   github: "https://github.com/parkkr-js/npm-hub",
   githubPrivate: false,
-  external: "https://npm-hub.vercel.app/",
+  external: "https://npmhub.vercel.app/",
 
   // Background
   background: [
